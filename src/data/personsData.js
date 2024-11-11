@@ -34,6 +34,6 @@ const persons = [
         age: 25,
         animal: "fox"
     }
-]
+];
 
 export default persons;

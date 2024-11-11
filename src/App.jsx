@@ -1,35 +1,42 @@
 import { useState } from "react";
-import Card from "./Card";
+import Card from "./components/Card";
+import Button from "./components/Button";
 import personsData from "./data/personsData";
 import "./App.css";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
-  const handleLogin = () => {
-    setIsLoggedIn(!isLoggedIn);
+  const toggleLogin = () => {
+    setIsLoggedIn((prevState) => !prevState);
+  };
+
+  const handleClick = (id) => {
+    console.log(`Card ${id} was clicked`);
   };
 
   return (
     <>
       <header>
         <h1>Demo app for practicing React</h1>
-        <button onClick={handleLogin}>
-          {isLoggedIn ? "Log out" : "Log in"}
-        </button>
+        <Button
+          onClick={toggleLogin}
+          text={isLoggedIn ? "Log out" : "Log in"}
+        />
       </header>
       <main>
         {isLoggedIn ? (
           <>
             <h2>Employees</h2>
             <div className="list">
-              {personsData.map((whatever) => (
+              {personsData.map((person) => (
                 <Card
-                  key={whatever.id}
-                  firstName={whatever.firstName}
-                  title={whatever.title}
-                  age={whatever.age}
-                  animal={whatever.animal}
+                  key={person.id}
+                  firstName={person.firstName}
+                  title={person.title}
+                  age={person.age}
+                  animal={person.animal}
+                  onClick={() => handleClick(person.id)} // Please note: this event is only in the App and is not related to edit/save button
                 />
               ))}
             </div>
