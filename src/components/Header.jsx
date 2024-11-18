@@ -1,23 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div>
-      <h1>React demo app</h1>
+    <header>
+      <h1>
+        <Link to="/">React demo app</Link>
+      </h1>
+
       <nav>
         <ul>
           <li>
-            <Link to="/"> Home</Link>
+            <NavLink to="/"> List</NavLink>
           </li>
           <li>
-            <Link to="list"> List</Link>
-          </li>
-          <li>
-            <Link to="about"> About</Link>
+            <NavLink to="about"> About</NavLink>
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 };
 
