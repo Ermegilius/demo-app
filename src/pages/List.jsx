@@ -6,7 +6,6 @@ const List = () => {
   const navigate = useNavigate();
   const handleNavigate = (id) => {
     navigate(`/${id}`);
-    //console.log(id);
   }
   return (
     <div>
