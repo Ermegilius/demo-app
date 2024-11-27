@@ -1,0 +1,40 @@
+{
+    "persons":
+    [ 
+        {
+            "id": 1,
+            "firstName": "Margit",
+            "title": "CEO",
+            "age": 29,
+            "animal": "fox"
+        },
+        {
+            "id": 2,
+            "firstName": "Vova",
+            "title": "Someone",
+            "age": 36,
+            "animal": "an animal..."
+        },
+        {
+            "id": 3,
+            "firstName": "Kati",
+            "title": "Developer",
+            "age": 25,
+            "animal": "animal2"
+        },
+        {
+            "id": 4,
+            "firstName": "John",
+            "title": "Developer",
+            "age": 25,
+            "animal": "animal3"
+        },
+        {
+            "id": 5,
+            "firstName": "Jane",
+            "title": "Developer",
+            "age": 25,
+            "animal": "animal4"
+        }
+    ]
+}

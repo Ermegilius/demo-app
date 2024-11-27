@@ -1,9 +1,9 @@
 const ErrorPage = () => {
   return (
-    <div>
-      <h2>Something went wrong, try again</h2>
-      <p>FOXES run back....</p>
-    </div>
+  <div>
+    <h1>404</h1>
+    <p>Page not found</p>
+  </div>
   );
 };
 
